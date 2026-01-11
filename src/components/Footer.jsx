@@ -71,9 +71,21 @@ function Footer() {
               &copy; {currentYear} UNSTABLECOIN. All rights reserved.
             </p>
             <div className="footer-legal">
-              <a href="#" className="footer-legal-link">Privacy Policy</a>
+              <a 
+                href="#" 
+                className="footer-legal-link"
+                onClick={(e) => e.preventDefault()}
+              >
+                Privacy Policy
+              </a>
               <span className="footer-separator">|</span>
-              <a href="#" className="footer-legal-link">Terms of Service</a>
+              <a 
+                href="#" 
+                className="footer-legal-link"
+                onClick={(e) => e.preventDefault()}
+              >
+                Terms of Service
+              </a>
             </div>
           </div>
         </div>

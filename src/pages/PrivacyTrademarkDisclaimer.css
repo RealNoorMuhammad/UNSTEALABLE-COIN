@@ -82,6 +82,14 @@
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
+.privacy-title-mobile {
+  display: none;
+}
+
+.privacy-title-desktop {
+  display: inline;
+}
+
 .privacy-content {
   display: flex;
   flex-direction: column;
@@ -188,6 +196,14 @@
   .privacy-title {
     font-size: 36px;
     letter-spacing: 2px;
+  }
+
+  .privacy-title-desktop {
+    display: none;
+  }
+
+  .privacy-title-mobile {
+    display: inline;
   }
 
   .privacy-subtitle {

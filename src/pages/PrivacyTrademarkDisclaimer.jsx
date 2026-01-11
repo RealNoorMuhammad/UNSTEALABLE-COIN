@@ -100,7 +100,8 @@ function PrivacyTrademarkDisclaimer() {
 
         <div ref={containerRef} className="privacy-container">
           <h1 ref={titleRef} className="privacy-title">
-            Privacy & Trademark Disclaimer
+            <span className="privacy-title-desktop">Privacy & Trademark Disclaimer</span>
+            <span className="privacy-title-mobile">Privacy</span>
           </h1>
           
           <div ref={contentRef} className="privacy-content">

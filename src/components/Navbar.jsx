@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import './Navbar.css';
@@ -119,23 +120,25 @@ function Navbar() {
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
         >
-          <motion.span
-            className="navbar-title-text"
-            animate={{
-              textShadow: [
-                '0 0 10px rgba(255, 215, 0, 0.5)',
-                '0 0 20px rgba(255, 215, 0, 0.8)',
-                '0 0 10px rgba(255, 215, 0, 0.5)'
-              ]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: 'easeInOut'
-            }}
-          >
-            UNSTABLECOIN
-          </motion.span>
+          <Link to="/" className="navbar-title-link">
+            <motion.span
+              className="navbar-title-text"
+              animate={{
+                textShadow: [
+                  '0 0 10px rgba(255, 215, 0, 0.5)',
+                  '0 0 20px rgba(255, 215, 0, 0.8)',
+                  '0 0 10px rgba(255, 215, 0, 0.5)'
+                ]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: 'easeInOut'
+              }}
+            >
+              UNSTABLECOIN
+            </motion.span>
+          </Link>
         </motion.h1>
 
         {/* Right: DexScreener Logo */}

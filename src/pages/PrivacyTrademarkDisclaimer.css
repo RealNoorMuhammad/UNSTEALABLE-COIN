@@ -1,0 +1,215 @@
+.privacy-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+  background: #000000;
+  overflow: hidden;
+}
+
+.privacy-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.privacy-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
+}
+
+.privacy-orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.3), transparent);
+  top: -10%;
+  left: -10%;
+}
+
+.privacy-orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.25), transparent);
+  bottom: -10%;
+  right: -10%;
+}
+
+.privacy-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.privacy-title {
+  font-family: 'Copyduck', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5),
+               0 0 40px rgba(255, 215, 0, 0.3),
+               0 0 60px rgba(255, 215, 0, 0.2);
+  position: relative;
+}
+
+.privacy-title::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #FFD700,
+    transparent
+  );
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.privacy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: left;
+}
+
+.privacy-section-block {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.privacy-section-block:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2),
+              inset 0 1px 0 rgba(255, 215, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.privacy-subtitle {
+  font-family: 'Copyduck', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.privacy-section-block p {
+  margin-bottom: 20px;
+}
+
+.privacy-section-block p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.privacy-list li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.privacy-list li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+  font-size: 12px;
+}
+
+.privacy-list li:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-back-link {
+  position: absolute;
+  top: 105px;
+  left: 30px;
+  z-index: 1000;
+}
+
+.privacy-link-button {
+  display: inline-block;
+  font-family: 'Copyduck', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFD700;
+  text-decoration: none;
+  padding: 15px 30px;
+  border: 2px solid rgba(255, 215, 0, 0.5);
+  border-radius: 8px;
+  background: rgba(255, 215, 0, 0.05);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.privacy-link-button:hover {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .privacy-title {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+
+  .privacy-subtitle {
+    font-size: 22px;
+  }
+
+  .privacy-section-block {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .privacy-container {
+    max-width: 100%;
+  }
+
+  .privacy-back-link {
+    top: 80px;
+    left: 15px;
+  }
+
+  .privacy-link-button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}

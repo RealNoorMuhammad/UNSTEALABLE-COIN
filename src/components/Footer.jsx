@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import dexscreenerLogo from '../assets/dexscreener.png';
 import mainLogo from '../assets/logo.png';
@@ -71,21 +72,13 @@ function Footer() {
               &copy; {currentYear} UNSTABLECOIN. All rights reserved.
             </p>
             <div className="footer-legal">
-              <a 
-                href="#" 
+              <Link 
+                to="/privacy" 
                 className="footer-legal-link"
-                onClick={(e) => e.preventDefault()}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 Privacy Policy
-              </a>
-              <span className="footer-separator">|</span>
-              <a 
-                href="#" 
-                className="footer-legal-link"
-                onClick={(e) => e.preventDefault()}
-              >
-                Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -54,6 +54,13 @@
   z-index: 0;
 }
 
+.navbar-title-link {
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+  display: inline-block;
+}
+
 .navbar-title-text {
   font-family: 'Copyduck', sans-serif;
   font-size: 36px;
@@ -67,6 +74,14 @@
   position: relative;
   display: inline-block;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.navbar-title-link:hover .navbar-title-text {
+  color: #FFED4E;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8),
+               0 0 25px rgba(255, 215, 0, 0.5),
+               0 0 35px rgba(255, 215, 0, 0.3);
 }
 
 .navbar-title-text::before {
@@ -87,7 +102,7 @@
   transition: opacity 0.3s ease;
 }
 
-.navbar-title:hover .navbar-title-text::before {
+.navbar-title-link:hover .navbar-title-text::before {
   opacity: 1;
 }
 
